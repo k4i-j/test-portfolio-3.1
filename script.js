@@ -1,26 +1,3 @@
-// Carousel functionality
-const track = document.getElementById('carouselTrack');
-const slides = Array.from(track.children);
-const leftBtn = document.querySelector('.carousel-arrow.left');
-const rightBtn = document.querySelector('.carousel-arrow.right');
-
-let currentIndex = 0;
-const slideWidth = slides[0].getBoundingClientRect().width + 15; // slide width + margin
-
-function updateCarousel() {
-  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
-
-leftBtn.addEventListener('click', () => {
-  currentIndex = Math.max(0, currentIndex - 1);
-  updateCarousel();
-});
-
-rightBtn.addEventListener('click', () => {
-  currentIndex = Math.min(slides.length - 3, currentIndex + 1); // Show 3 slides max at once
-  updateCarousel();
-});
-
 // Modal for project details
 const modal = document.getElementById('projectModal');
 const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -30,13 +7,15 @@ const modalTech = document.getElementById('modalTech');
 const modalRole = document.getElementById('modalRole');
 const modalChallenges = document.getElementById('modalChallenges');
 
-slides.forEach(slide => {
-  slide.addEventListener('click', () => {
-    modalTitle.textContent = slide.dataset.title;
-    modalOverview.textContent = slide.dataset.overview;
-    modalTech.textContent = slide.dataset.tech;
-    modalRole.textContent = slide.dataset.role;
-    modalChallenges.textContent = slide.dataset.challenges;
+const projectCards = document.querySelectorAll('.project-card');
+
+projectCards.forEach(card => {
+  card.addEventListener('click', () => {
+    modalTitle.textContent = card.dataset.title;
+    modalOverview.textContent = card.dataset.overview;
+    modalTech.textContent = card.dataset.tech;
+    modalRole.textContent = card.dataset.role;
+    modalChallenges.textContent = card.dataset.challenges;
     modal.style.display = 'flex';
   });
 });
