@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaijie’s Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Kaijie’s Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials-awards">Testimonials & Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="section">
+    <h2>Aspiring Future Engineer</h2>
+    <p>Course Write-Up(600 characters):</p>
+    <p>My fascination with robotics grew after exploring innovations like Boston Dynamics’ Spot. I enjoy studying blueprints and designs of how robots are made and plan to work on Arduino projects soon to deepen my skills. The automated production line I observed at Temasek Polytechnic’s open house further solidified my commitment to Mechatronics. I am eager to develop technical expertise and contribute to innovative solutions. The poly-uni pathway motivates me to pursue continuous learning beyond polytechnic.</p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>My Projects</h2>
+    <div class="carousel-container">
+      <button class="carousel-arrow left" aria-label="Previous project">&#8592;</button>
+      <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide" data-title="Robot Arm" data-overview="A simple robotic arm controlled via Arduino." data-tech="Arduino, Servo motors" data-role="Built and programmed the arm" data-challenges="Fine-tuning servo control for smooth movement.">
+            <img src="https://th.bing.com/th/id/OIF.EfngNbNVM3e0oSqrtVbsvw?w=162&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 1 Robot Arm" />
+          </div>
+          <div class="carousel-slide" data-title="Line Follower" data-overview="An autonomous robot that follows lines using sensors." data-tech="Arduino, IR Sensors" data-role="Designed the sensor circuit and coded logic" data-challenges="Handling sensor noise for accuracy.">
+            <img src="https://th.bing.com/th/id/OIP.afkDPcbFI2WX5o1RQf9hEAHaJ5?w=128&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 2 Line Follower" />
+          </div>
+          <div class="carousel-slide" data-title="Obstacle Avoider" data-overview="Robot that avoids obstacles using ultrasonic sensors." data-tech="Arduino, Ultrasonic Sensor" data-role="Integrated sensor and programmed avoidance logic" data-challenges="Calibrating sensor range.">
+            <img src="https://th.bing.com/th/id/OIP.GdA8TDIK5J5CFQXNHhMeYAHaHa?w=156&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 3 Obstacle Avoider" />
+          </div>
+          <div class="carousel-slide" data-title="Automated Door" data-overview="Motion sensor controlled automated door prototype." data-tech="PIR Sensor, Arduino" data-role="Designed circuit and programmed sensor response" data-challenges="Sensor sensitivity tuning.">
+            <img src="https://th.bing.com/th/id/OIP.jk9SxgMfgWhNfXcF1EiK7AAAAA?w=117&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 4 Automated Door" />
+          </div>
+          <div class="carousel-slide" data-title="Temperature Logger" data-overview="Data logger for environmental temperature readings." data-tech="Arduino, Temperature sensor" data-role="Programmed data collection and display" data-challenges="Ensuring accurate data storage.">
+            <img src="https://th.bing.com/th/id/OIP.FA2XzQ4EFpDBLkED2INvxwHaLV?w=117&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 5 Temperature Logger" />
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow right" aria-label="Next project">&#8594;</button>
+    </div>
+
+    <!-- Project description modal -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="modalCloseBtn">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p><strong>Overview:</strong> <span id="modalOverview"></span></p>
+        <p><strong>Technologies:</strong> <span id="modalTech"></span></p>
+        <p><strong>Your Role:</strong> <span id="modalRole"></span></p>
+        <p><strong>Challenges & Solutions:</strong> <span id="modalChallenges"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials-awards" class="section">
+    <h2>Testimonials & Awards</h2>
+    <div class="tabs">
+      <button class="tab-btn active" data-target="testimonials">Testimonials</button>
+      <button class="tab-btn" data-target="awards">Awards</button>
+    </div>
+
+    <div id="testimonials" class="tab-content active">
+      <!-- Typed testimonials -->
+      <div class="testimonial">
+        <p>"Kaijie has an impressive problem-solving ability and a passion for robotics that’s inspiring!"</p>
+        <p><em>- Mentor A</em></p>
+      </div>
+      <div class="testimonial">
+        <p>"Always eager to learn and improve, Kaijie never backs down from a challenge."</p>
+        <p><em>- Teacher B</em></p>
+      </div>
+      <!-- Image testimonial example -->
+      <div class="testimonial-image">
+        <img src="testimonial_sample.jpg" alt="Testimonial from Client X" />
+      </div>
+    </div>
+
+    <div id="awards" class="tab-content">
+      <!-- Awards photos -->
+      <img src="award1.jpg" alt="Award 1" />
+      <img src="award2.jpg" alt="Award 2" />
+      <img src="award3.jpg" alt="Award 3" />
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:kaijief0@gmail.com">kaijief0@gmail.com</a></p>
+    <p>Phone: +65 94567266</p>
+    <p>Instagram: <a href="https://instagram.com/that_heigui_" target="_blank">@that_heigui_</a></p>
+  </section>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+  <footer>
+    <p>© 2025 Kaijie. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
