@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  
 // Modal for project details
 const modal = document.getElementById('projectModal');
 const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -38,12 +36,20 @@ const tabContents = document.querySelectorAll('.tab-content');
 
 tabButtons.forEach(btn => {
   btn.addEventListener('click', () => {
+    // Remove 'active' from all buttons
     tabButtons.forEach(b => b.classList.remove('active'));
+    // Add 'active' to clicked button
     btn.classList.add('active');
 
-    const target = btn.dataset.target;
+    const targetId = btn.dataset.target;
     tabContents.forEach(content => {
-      content.classList.toggle('active', content.id === target);
+      if (content.id === targetId) {
+        content.classList.add('active');
+        content.style.display = 'block';  // Show active tab content
+      } else {
+        content.classList.remove('active');
+        content.style.display = 'none';   // Hide others
+      }
     });
   });
 });
@@ -57,6 +63,4 @@ window.addEventListener('scroll', () => {
 
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-  
 });
