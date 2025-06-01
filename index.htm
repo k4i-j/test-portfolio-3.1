@@ -24,44 +24,38 @@
     <p>My fascination with robotics grew after exploring innovations like Boston Dynamics’ Spot. I enjoy studying blueprints and designs of how robots are made and plan to work on Arduino projects soon to deepen my skills. The automated production line I observed at Temasek Polytechnic’s open house further solidified my commitment to Mechatronics. I am eager to develop technical expertise and contribute to innovative solutions. The poly-uni pathway motivates me to pursue continuous learning beyond polytechnic.</p>
   </section>
 
-  <section id="projects" class="section">
-    <h2>My Projects</h2>
-    <div class="carousel-container">
-      <button class="carousel-arrow left" aria-label="Previous project">&#8592;</button>
-      <div class="carousel">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide" data-title="Robot Arm" data-overview="A simple robotic arm controlled via Arduino." data-tech="Arduino, Servo motors" data-role="Built and programmed the arm" data-challenges="Fine-tuning servo control for smooth movement.">
-            <img src="https://th.bing.com/th/id/OIF.EfngNbNVM3e0oSqrtVbsvw?w=162&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 1 Robot Arm" />
-          </div>
-          <div class="carousel-slide" data-title="Line Follower" data-overview="An autonomous robot that follows lines using sensors." data-tech="Arduino, IR Sensors" data-role="Designed the sensor circuit and coded logic" data-challenges="Handling sensor noise for accuracy.">
-            <img src="https://th.bing.com/th/id/OIP.afkDPcbFI2WX5o1RQf9hEAHaJ5?w=128&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 2 Line Follower" />
-          </div>
-          <div class="carousel-slide" data-title="Obstacle Avoider" data-overview="Robot that avoids obstacles using ultrasonic sensors." data-tech="Arduino, Ultrasonic Sensor" data-role="Integrated sensor and programmed avoidance logic" data-challenges="Calibrating sensor range.">
-            <img src="https://th.bing.com/th/id/OIP.GdA8TDIK5J5CFQXNHhMeYAHaHa?w=156&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 3 Obstacle Avoider" />
-          </div>
-          <div class="carousel-slide" data-title="Automated Door" data-overview="Motion sensor controlled automated door prototype." data-tech="PIR Sensor, Arduino" data-role="Designed circuit and programmed sensor response" data-challenges="Sensor sensitivity tuning.">
-            <img src="https://th.bing.com/th/id/OIP.jk9SxgMfgWhNfXcF1EiK7AAAAA?w=117&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 4 Automated Door" />
-          </div>
-          <div class="carousel-slide" data-title="Temperature Logger" data-overview="Data logger for environmental temperature readings." data-tech="Arduino, Temperature sensor" data-role="Programmed data collection and display" data-challenges="Ensuring accurate data storage.">
-            <img src="https://th.bing.com/th/id/OIP.FA2XzQ4EFpDBLkED2INvxwHaLV?w=117&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Project 5 Temperature Logger" />
-          </div>
-        </div>
-      </div>
-      <button class="carousel-arrow right" aria-label="Next project">&#8594;</button>
+ <section id="projects" class="section">
+  <h2>Featured Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card" 
+         data-title="Smart Home Automation"
+         data-overview="A project that automates lights and fans using Arduino and sensors."
+         data-tech="Arduino, C++, PIR Sensor"
+         data-role="Lead Developer"
+         data-challenges="Wiring complexity and sensor calibration.">
+      <img src="images/smart-home.jpg" alt="Smart Home Automation" />
     </div>
 
-    <!-- Project description modal -->
-    <div id="projectModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" id="modalCloseBtn">&times;</span>
-        <h3 id="modalTitle"></h3>
-        <p><strong>Overview:</strong> <span id="modalOverview"></span></p>
-        <p><strong>Technologies:</strong> <span id="modalTech"></span></p>
-        <p><strong>Your Role:</strong> <span id="modalRole"></span></p>
-        <p><strong>Challenges & Solutions:</strong> <span id="modalChallenges"></span></p>
-      </div>
+    <div class="project-card" 
+         data-title="Python Game"
+         data-overview="A fun arcade-style game built using Python and Pygame."
+         data-tech="Python, Pygame"
+         data-role="Solo Developer"
+         data-challenges="Game loop logic and sprite animation.">
+      <img src="images/python-game.jpg" alt="Python Game" />
     </div>
-  </section>
+
+    <div class="project-card" 
+         data-title="Portfolio Website"
+         data-overview="This very website you're on, showcasing my work and projects."
+         data-tech="HTML, CSS, JavaScript"
+         data-role="Frontend Developer"
+         data-challenges="Responsive design and interactivity.">
+      <img src="images/portfolio.jpg" alt="Portfolio Website" />
+    </div>
+  </div>
+</section>
+
 
   <section id="testimonials-awards" class="section">
     <h2>Testimonials & Awards</h2>
