@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+  
 // Modal for project details
 const modal = document.getElementById('projectModal');
 const modalCloseBtn = document.getElementById('modalCloseBtn');
@@ -55,4 +57,6 @@ window.addEventListener('scroll', () => {
 
 scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+  
 });
